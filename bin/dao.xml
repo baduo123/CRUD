@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<connection
+	type = "mysql"
+	driver = "com.mysql.jdbc.Driver"
+	url = "jdbc:mysql://localhost:3306/info?characterEncoding=UTF-8"
+	name = "root"
+	pass = "wyaonng6361"
+	/>
+	<pos>
+		<po name="user" class="dao.po.User" table = "user">
+			<property name="id" type = "java.lang.Integer"/>
+			<property name="uname" type = "java.lang.String"/>
+			<property name="account" type = "java.lang.String"/>
+			<property name="pass" type = "java.lang.String"/>
+		</po>
+	</pos>
+	
+	<daos>
+		<dao name="userDAO" class="dao.userDAO" po = "user"/>
+	</daos>
+</config>
